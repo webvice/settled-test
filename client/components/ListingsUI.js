@@ -1,0 +1,33 @@
+import React from 'react';
+import _ from 'lodash';
+import { Link } from 'react-router';
+
+
+
+var listingRowItem = (item) => (		
+		<div key={item.id} className="item">
+			<div className="right floated content">
+			  <Link to={"listings/"+item.id} className="ui primary button">Details</Link>
+			</div>
+			<div className="content">
+				<div className="header">{item.name}</div>
+			  	{item.description}
+			</div>
+		</div>
+	)
+
+
+const ListingsUI = ({listings}) => {
+	var list = _.map(listings, listingRowItem);   		
+		
+	return (
+		<div className="ui main text container">
+			<h1 className="ui header">This is Listings</h1>
+			<div className="ui middle aligned divided list very relaxed">
+				{list}
+			</div>
+		</div>
+	)
+}
+
+export default ListingsUI

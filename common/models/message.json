@@ -1,0 +1,32 @@
+{
+  "name": "Message",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "user": {
+      "type": "string",
+      "default": ""
+    },
+    "createdAt": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "listingId": {
+      "type": "belongsTo",
+      "model": "Listing",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
