@@ -1,4 +1,4 @@
-const listings = (state=[], action) => {
+const listings = (state={}, action) => {
 	switch(action.type){
 		case 'LISTINGS_REQUEST' : 
 			return {

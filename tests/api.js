@@ -2,6 +2,15 @@ var app = require("../server/server");
 var supertest = require("supertest")(app);
 var expect = require("chai").expect;
 
+before(function(done) {
+    this.timeout(15000)
+    app.start();
+    app.on("started", function() {
+       console.log("Server Ready to RUN TEST");
+       setTimeout(done, 5000);
+   });
+})
+
 describe("Listings", function() {
 	it("getAll", function(done) {
     	supertest

@@ -10,7 +10,6 @@ A sample Redux-React application using LoopBack
   - More details at https://loopback.io
 - **React-Router**
 - **React-Thunk (for asynchronous callbacks to API)**
-
 - **Testing**
   - Mocha
   - Chai
@@ -32,6 +31,11 @@ $ npm install
 $ npm start
 ```
 
+- **To Build**
+```bash
+$ npm run deploy
+```
+
 - **To Test**
 ```bash
 $ npm test
@@ -48,3 +52,4 @@ $ npm test
 - I have used redux for the first time, so it's a learning curve for me.
 - In 2-4 weeks i will be comfortable with it.
 - I did try redux-saga but it seemed bit difficult so i have not used it for now.
+- I have not worked much with testing frameworks so i have just implemented basic tests.

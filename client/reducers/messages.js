@@ -1,4 +1,4 @@
-const messages = (state=[], action) => {
+const messages = (state={}, action) => {
 	switch(action.type){
 		case 'MESSAGE_ADD_REQUEST' : 
 			return Object.assign({}, state, {loading: true});
