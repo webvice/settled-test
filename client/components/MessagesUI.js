@@ -15,10 +15,12 @@ var messageRowItem = (item) => (
 const MessagesUI = ({messages}) => {
 	console.log("MessagesUI :", messages)
 	var list = _.map(messages, messageRowItem);   		
-		
+	if(list.length == 0) {
+		list = <h3>No Message Found. Please go to property view and message the owner</h3>
+	}
 	return (
 		<div className="ui main text container">
-			<h1 className="ui header">This is messages list</h1>
+			<h3 className="ui block header">Messages</h3>
 			<div className="ui middle aligned divided list very relaxed">
 				{list}
 			</div>

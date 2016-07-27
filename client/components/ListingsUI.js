@@ -22,7 +22,7 @@ const ListingsUI = ({listings}) => {
 		
 	return (
 		<div className="ui main text container">
-			<h1 className="ui header">This is Listings</h1>
+			<h3 className="ui block header">Properties</h3>
 			<div className="ui middle aligned divided list very relaxed">
 				{list}
 			</div>
