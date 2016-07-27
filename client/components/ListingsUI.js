@@ -2,19 +2,17 @@ import React from 'react';
 import _ from 'lodash';
 import { Link } from 'react-router';
 
-
-
 var listingRowItem = (item) => (		
-		<div key={item.id} className="item">
-			<div className="right floated content">
-			  <Link to={"listings/"+item.id} className="ui primary button">Details</Link>
-			</div>
-			<div className="content">
-				<div className="header">{item.name}</div>
-			  	{item.description}
-			</div>
+	<div key={item.id} className="item">
+		<div className="right floated content">
+		  <Link to={"listings/"+item.id} className="ui primary button">Details</Link>
 		</div>
-	)
+		<div className="content">
+			<div className="header">{item.name}</div>
+		  	{item.description}
+		</div>
+	</div>
+)
 
 
 const ListingsUI = ({listings, loading}) => {
@@ -32,7 +30,6 @@ const ListingsUI = ({listings, loading}) => {
 			</div>
 		</div>
 	)
-	
 }
 
 export default ListingsUI

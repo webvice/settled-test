@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch'
+import fetch from 'isomorphic-fetch';
 
 /*Actions to get Listings*/
 function requestListings() {
@@ -70,6 +70,7 @@ export function addMessage(text, listingId, user) {
 	}
 }
 
+/*Action to notify/message */
 function notify(message) {
 	return (dispatch) => {
 		dispatch({type: "NOTIFY_SUCCESS", message});

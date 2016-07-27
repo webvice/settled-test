@@ -16,17 +16,17 @@ class AddMessageUI extends React.Component {
 	}
 
 	handleMessageChange(e) {
-	  this.setState({message: e.target.value});
+	  	this.setState({message: e.target.value});
 	}
 
 	handleSubmit(e) {
-	  e.preventDefault();
-	  var message = this.state.message.trim();
-	  if (!message) {
-	    return;
-	  }
-	  this.props.addMessage(message, this.state.listingId, this.state.user);
-	  this.setState({message: ''});
+	 	e.preventDefault();
+	 	var message = this.state.message.trim();
+	 	if (!message) {
+	 	  return;
+	 	}
+	 	this.props.addMessage(message, this.state.listingId, this.state.user);
+	  	this.setState({message: ''});
 	}
 
    	render() {
@@ -45,11 +45,11 @@ class AddMessageUI extends React.Component {
    		return (
 			<div className="ui items">
 			    <form className="ui form" name="messageForm" onSubmit={this.handleSubmit}>
-			      <div className="field">
-			        <label>Send message to {this.props.user}</label>
-			        <textarea id="message" name="message" value={this.state.message} onChange={this.handleMessageChange} required></textarea>
-			      </div>
-			      <button type="submit" className="ui primary button" value="Post" disabled={loading?"disabled":""}>Send</button> {loading}
+			      	<div className="field">
+			        	<label>Send message to {this.props.user}</label>
+			        	<textarea id="message" name="message" value={this.state.message} onChange={this.handleMessageChange} required></textarea>
+			      	</div>
+			      	<button type="submit" className="ui primary button" value="Post" disabled={loading?"disabled":""}>Send</button> {loading}
 			    </form>
 			    {success}
 			</div>
