@@ -17,17 +17,22 @@ var listingRowItem = (item) => (
 	)
 
 
-const ListingsUI = ({listings}) => {
+const ListingsUI = ({listings, loading}) => {
 	var list = _.map(listings, listingRowItem);   		
-		
+	console.log("ListingsUI: ", loading)
+	var content = <div className="ui active centered inline loader"></div>
+	if (!loading) {
+		content = list;
+	}
 	return (
 		<div className="ui main text container">
 			<h1 className="ui header">This is Listings</h1>
 			<div className="ui middle aligned divided list very relaxed">
-				{list}
+				{content}
 			</div>
 		</div>
 	)
+	
 }
 
 export default ListingsUI

@@ -8,19 +8,23 @@
   "properties": {
     "name": {
       "type": "string",
-      "default": ""
+      "default": "",
+      "required": true
     },
     "description": {
       "type": "string",
-      "default": ""
+      "default": "",
+      "required": true
     },
     "createdBy": {
       "type": "string",
-      "default": ""
+      "default": "",
+      "required": true
     },
     "createdAt": {
       "type": "number",
-      "default": 0
+      "default": 0,
+      "required": true
     }
   },
   "validations": [],

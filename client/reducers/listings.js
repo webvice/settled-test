@@ -44,11 +44,20 @@ var defaultListings= [
 
 			]
 
-const listings = (state=defaultListings, action) => {
+const listings = (state=[], action) => {
 	switch(action.type){
-		// case 'LIST_ALL' : 
-		// 	return [...state, listings];
-
+		case 'LISTINGS_REQUEST' : 
+			return {
+				loading: true,
+				data: [],
+				err: null
+			}
+		case 'LISTINGS_RECEIVE' :
+			return {
+				loading: false,
+				data: action.listings,
+				err: action.err
+			}
 		default:
 			return state;
 	}

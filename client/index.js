@@ -10,6 +10,7 @@ import Listings from './containers/Listings.js';
 import ListingItem from './containers/ListingItem.js';
 import Messages from './containers/Messages.js';
 import configureStore from './store/configureStore';
+import { fetchListings } from './actions/index';
 
 const NoMatch = () => (
 	<h1>Path not found</h1>
@@ -36,3 +37,9 @@ ReactDOM.render(
 
 
 
+// store.dispatch(selectSubreddit('reactjs'))
+store.dispatch(fetchListings()).then(() =>
+  console.log(store.getState())
+)
+
+// store.dispatch({type:"LISTINGS_FETCH"})
