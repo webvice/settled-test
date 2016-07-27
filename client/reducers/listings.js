@@ -1,4 +1,3 @@
-
 const listings = (state=[], action) => {
 	switch(action.type){
 		case 'LISTINGS_REQUEST' : 
@@ -18,4 +17,4 @@ const listings = (state=[], action) => {
 	}
 }
 
-export default listings
+export default listings;

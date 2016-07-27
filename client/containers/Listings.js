@@ -1,4 +1,4 @@
-import ListingsUI from '../components/ListingsUI'
+import ListingsUI from '../components/ListingsUI';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {

@@ -1,15 +1,5 @@
 const messages = (state=[], action) => {
 	switch(action.type){
-		// case 'MESSAGE_ADD' : 
-		// 	var message = {
-		// 		id: state.length+1,
-		// 		text:action.text,
-		// 		listingId: action.listingId,
-		// 		user: action.user,
-		// 		createdAt: Date.now()
-		// 	}
-		// 	return [...state, message];
-
 		case 'MESSAGE_ADD_REQUEST' : 
 			return Object.assign({}, state, {loading: true});
 		case 'MESSAGE_ADD_RECEIVE' :
@@ -36,4 +26,4 @@ const messages = (state=[], action) => {
 	}
 }
 
-export default messages
+export default messages;

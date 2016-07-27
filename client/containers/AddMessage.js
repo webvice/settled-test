@@ -1,6 +1,6 @@
-import AddMessageUI from '../components/AddMessageUI'
-import { connect } from 'react-redux'
-import { addMessage } from '../actions/index'
+import AddMessageUI from '../components/AddMessageUI';
+import { connect } from 'react-redux';
+import { addMessage } from '../actions/index';
 
 const mapStateToProps = (state) => {
 	return {

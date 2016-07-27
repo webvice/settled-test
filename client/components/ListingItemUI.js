@@ -5,7 +5,6 @@ import AddMessage from '../containers/AddMessage';
 import moment  from 'moment';
 
 const ListingItemUI = (props) => {
-		console.log("props in listingItemUI: ", props);
 		var listingItem = props.listingItem || {};
 		return (
    			<div className="ui main text container">
