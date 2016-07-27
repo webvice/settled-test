@@ -6,9 +6,9 @@ module.exports = {
     './client/index'
   ],
   output: {
-    path: path.join(__dirname, '.build/dist'),
+    path: path.join(__dirname, 'client_dist'),
     filename: 'bundle.js',
-    publicPath: '/.build'
+    publicPath: '/client_dist'
   },
   module: {
     loaders: [{

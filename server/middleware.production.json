@@ -1,8 +1,15 @@
 {
   "files": {
-    "loopback#static": {
-      "params": "$!../.build"
-    }
+    "loopback#static": [{
+      "name": "default",
+      "paths": ["/"],
+      "params": "$!../client_dist"
+    },
+    {
+      "name": "public",
+      "paths": ["/public"],
+      "params": "$!../client/public"
+    }]
   },
   "final:after": {
     "loopback#errorHandler": {
@@ -12,3 +19,4 @@
     }
   }
 }
+

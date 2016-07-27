@@ -23,9 +23,11 @@
     }
   },
   "files": {
-    "loopback#static": {
+    "loopback#static": [{
+      "name": "default",
+      "paths": ["/"],
       "params": "$!../client"
-    }
+    }]
   },
   "final": {
     "loopback#urlNotFound": {}

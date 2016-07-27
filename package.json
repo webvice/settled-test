@@ -6,7 +6,7 @@
     "start": "node .",
     "start_prod": "NODE_ENV=production node .",
     "deploy": "NODE_ENV=production webpack -p --config webpack.config.production.js --progress",
-    "clean": "rm -rf .build/dist",
+    "clean": "rm -rf client_dist/bundle.js",
     "test": "mocha --compilers js:babel-core/register ./tests/"
   },
   "keywords": [
