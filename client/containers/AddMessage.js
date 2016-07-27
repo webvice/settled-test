@@ -2,6 +2,14 @@ import AddMessageUI from '../components/AddMessageUI'
 import { connect } from 'react-redux'
 import { addMessage } from '../actions/index'
 
+const mapStateToProps = (state) => {
+	return {
+		loading: state.messages.loading,
+		err: state.messages.err,
+		notify: state.common
+	}
+}
+
 const mapDispatchToProps = (dispatch) => {
 	return {
 		addMessage: (text, listingId, user) => {
@@ -11,6 +19,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(
-	null,
+	mapStateToProps,
 	mapDispatchToProps
 )(AddMessageUI);

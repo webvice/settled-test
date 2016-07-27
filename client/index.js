@@ -15,6 +15,12 @@ import { fetchListings, fetchMessages } from './actions/index';
 const NoMatch = () => (
 	<h1>Path not found</h1>
 )
+const Dashboard = () => (
+  <div className="ui main text container">
+    <h3 className="ui block header">Dashboard</h3>
+  </div>
+)
+
 const store = configureStore();
 
 
@@ -23,6 +29,7 @@ ReactDOM.render(
   <Provider store={store}>
   		<Router history={hashHistory}>
   		    <Route path="/" component={App}>
+            <IndexRoute component={Dashboard}/>
   		      <Route path="listings">
   		      	<IndexRoute component={Listings} />
   		      	<Route path=":id" component={ListingItem}/>

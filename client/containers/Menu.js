@@ -9,10 +9,10 @@ class Menu extends React.Component {
 			<div className="ui fixed inverted menu">
 			    <div className="ui container">
 			      <a href="#" className="header item">
-			        Project Name
+			        Settled
 			      </a>
 			      <IndexLink activeStyle={highlightStyle} to="/" className="item">Home</IndexLink>
-			      <Link activeStyle={highlightStyle} to="/listings" className="item">Listings</Link>
+			      <Link activeStyle={highlightStyle} to="/listings" className="item">Properties</Link>
 			      <IndexLink activeStyle={highlightStyle} to="/messages" className="item">Messages</IndexLink>			      
 			    </div>
 			    <hr/>

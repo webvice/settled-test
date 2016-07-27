@@ -1,9 +1,6 @@
 import fetch from 'isomorphic-fetch'
 
-export function addMessage(text, listingId, user) {
-	return {type:"MESSAGE_ADD", text: text, listingId: listingId, user: user};
-}
-
+/*Actions to get Listings*/
 function requestListings() {
 	return {type:"LISTINGS_REQUEST"};
 }
@@ -21,6 +18,7 @@ export function fetchListings() {
 	}
 }
 
+/*Actions to get Messages*/
 function requestMessages() {
 	return {type:"MESSAGES_REQUEST"};
 }
@@ -35,5 +33,48 @@ export function fetchMessages() {
 		return fetch("/api/Messages")
 					.then(response => response.json())
 					.then(json=> dispatch(receiveMessages(json)));
+	}
+}
+
+/*Actions to add Message*/
+function requestMessageAdd() {
+	return {type:"MESSAGE_ADD_REQUEST"};
+}
+
+function receiveMessageAdd(json) {
+	console.log("Message add callback: ", json);
+	return {type:"MESSAGE_ADD_RECEIVE", message:json};
+}
+
+export function addMessage(text, listingId, user) {
+	return (dispatch) => {
+		dispatch(requestMessageAdd());
+		return fetch('/api/Messages', {
+			method: 'POST',
+			headers: {
+			  'Accept': 'application/json',
+			  'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				text: text,
+				listingId: listingId,
+				user: user,
+				createdAt: Date.now()
+			})
+		})
+			.then(response => response.json())
+			.then(json=> {
+				dispatch(receiveMessageAdd(json));
+				dispatch(notify("Message sent to " + user + " successfully!"));
+			});
+	}
+}
+
+function notify(message) {
+	return (dispatch) => {
+		dispatch({type: "NOTIFY_SUCCESS", message});
+		setTimeout(function(){
+			dispatch({type: "NOTIFY_CLEAR"});
+		}, 5000)
 	}
 }

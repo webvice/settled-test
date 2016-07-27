@@ -44,7 +44,7 @@ const ListingItemUI = (props) => {
 						    </div>
 						</div>
 					</div>
-					<AddMessage owner={listingItem.createdBy} listingId={listingItem.id}/>
+					<AddMessage user={listingItem.createdBy} listingId={listingItem.id}/>
 				</div>
 		)
 			

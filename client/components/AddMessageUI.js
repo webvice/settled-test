@@ -9,7 +9,7 @@ class AddMessageUI extends React.Component {
 		this.state= {
 			message: '',
 			listingId: props.listingId,
-			user: 'User1'
+			user: props.user
 		}
 		this.handleMessageChange = this.handleMessageChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,15 +30,28 @@ class AddMessageUI extends React.Component {
 	}
 
    	render() {
+   		var loading = null;
+   		var success;
+   		if (this.props.loading) {
+   			loading = <div className="ui active inline loader"></div>
+   		}
+   		if (this.props.notify.show) {
+   			success=<div className="ui positive message">
+   			  <div className="header">
+   			    {this.props.notify.message}
+   			  </div>
+   			</div>
+   		}
    		return (
 			<div className="ui items">
 			    <form className="ui form" name="messageForm" onSubmit={this.handleSubmit}>
 			      <div className="field">
-			        <label>Send message to {this.props.owner}</label>
+			        <label>Send message to {this.props.user}</label>
 			        <textarea id="message" name="message" value={this.state.message} onChange={this.handleMessageChange} required></textarea>
 			      </div>
-			      <button type="submit" className="ui primary button" value="Post">Send</button>
+			      <button type="submit" className="ui primary button" value="Post" disabled={loading?"disabled":""}>Send</button> {loading}
 			    </form>
+			    {success}
 			</div>
 		)
 	}

@@ -7,7 +7,7 @@ var messageRowItem = (item) => (
 		<div key={item.id} className="item">
 			<div className="content">
 				<div className="header">{item.text}</div>
-				<div className="description">{item.user} | <Link to={"listings/"+item.listingId}>{item.listingId}</Link> | {moment(item.createdAt).fromNow()}</div>
+				<div className="description">{item.user} | <Link to={"listings/"+item.listingId}>Go to property</Link> | {moment(item.createdAt).fromNow()}</div>
 			</div>
 		</div>
 	)
