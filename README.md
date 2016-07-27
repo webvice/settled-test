@@ -6,15 +6,15 @@ A sample Redux-React application using LoopBack
 - **React**
 - **Redux**
 - **Loopback (extension of express)**
-		- Provides Rest API framework
-		- More details at https://loopback.io
+  - Provides Rest API framework
+  - More details at https://loopback.io
 - **React-Router**
 - **React-Thunk (for asynchronous callbacks to API)**
 
 - **Testing**
-		- Mocha
-		- Chai
-		- Supertest
+  - Mocha
+  - Chai
+  - Supertest
 
 ### Get Started
 - **Clone this repository or use npm**
