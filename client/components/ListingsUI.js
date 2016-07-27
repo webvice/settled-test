@@ -17,7 +17,6 @@ var listingRowItem = (item) => (
 
 const ListingsUI = ({listings, loading}) => {
 	var list = _.map(listings, listingRowItem);   		
-	console.log("ListingsUI: ", loading)
 	var content = <div className="ui active centered inline loader"></div>
 	if (!loading) {
 		content = list;
@@ -32,4 +31,4 @@ const ListingsUI = ({listings, loading}) => {
 	)
 }
 
-export default ListingsUI
+export default ListingsUI;

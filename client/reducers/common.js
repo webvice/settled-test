@@ -1,4 +1,3 @@
-
 const common = (state={}, action) => {
 	switch(action.type){
 		case 'NOTIFY_SUCCESS' : 
@@ -16,4 +15,4 @@ const common = (state={}, action) => {
 	}
 }
 
-export default common
+export default common;

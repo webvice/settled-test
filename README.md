@@ -1,31 +1,28 @@
-# loopback-redux-react-boilerplate
+# React-Redux Demo
 
-A boilerplate for a Redux-React application using LoopBack
+A sample Redux-React application using LoopBack
 
 ### Techonologies used
 - **React**
 - **Redux**
 - **Loopback (extension of express)**
--Provides Rest API framework
--More details at https://loopback.io
+  - Provides Rest API framework
+  - More details at https://loopback.io
 - **React-Router**
 - **React-Thunk (for asynchronous callbacks to API)**
 
-### Testing
-- **Mocha
-- **Chai
-- **Supertest
+- **Testing**
+  - Mocha
+  - Chai
+  - Supertest
 
 ### Get Started
 - **Clone this repository or use npm**
 ```bash
 $ git clone https://github.com/tngan/loopback-redux-react-boilerplate.git
 ```
-```bash
-$ npm install loopback-redux-react-boilerplate
-```
 
-- **Install dependencies specified in package.json**
+- **To setup the project**
 ```bash
 $ npm install
 ```
@@ -35,22 +32,19 @@ $ npm install
 $ npm start
 ```
 
-### Scripts
-- **npm run deploy**: Bundles the application into `.build/dist`.
+- **To Test**
+```bash
+$ npm test
+```
 
-- **npm run start_prod**: Starts production server, make sure you have already deployed the application.
+### Details
+- There is no user management logic, so for now all data can be viewed.
+- Data will be lost when server is stopped/restarted as we are using server db memory for storing data.
+- I have used the proper redux flow.
+- There is a scope in code improvement.
+- I have used listings instead of properties as it conflicts with technical terms.
 
-- **npm run clean**: Removes the bundled files.
-
-### Built-in example
-A simple 'Hello World' Redux-React application is included in this boilerplate. You can find those files under `/client`.
-
-Hot reloading is only applied in development mode. In production mode, the code base is pre-compiled and placed under `.build/dist`.
-
-### License
-
-[MIT](LICENSE)
-
-### Copyright
-
-Copyright (C) 2016 Tony Ngan, released under the MIT License.
+### Notes
+- I have used redux for the first time, so it's a learning curve for me.
+- In 2-4 weeks i will be comfortable with it.
+- I did try redux-saga but it seemed bit difficult so i have not used it for now.

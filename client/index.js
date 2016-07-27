@@ -45,8 +45,8 @@ ReactDOM.render(
 
 
 store.dispatch(fetchListings()).then(() =>
-  console.log(store.getState())
+  console.log("Listings list action done: ", store.getState())
 )
 store.dispatch(fetchMessages()).then(() =>
-  console.log(store.getState())
+  console.log("Messages list action done: ", store.getState())
 )

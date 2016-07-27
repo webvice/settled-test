@@ -42,7 +42,6 @@ function requestMessageAdd() {
 }
 
 function receiveMessageAdd(json) {
-	console.log("Message add callback: ", json);
 	return {type:"MESSAGE_ADD_RECEIVE", message:json};
 }
 

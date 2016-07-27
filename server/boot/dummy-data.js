@@ -47,7 +47,7 @@ module.exports = function(server) {
   		Listing.create(defaultListings);
   		Listing.find(function(err, listings){
   			Message.create([{
-  				text: "My deafult message",
+  				text: "My default message",
 				user: "User1",
 				createdAt: Date.now(),
 				listingId: listings[0].id

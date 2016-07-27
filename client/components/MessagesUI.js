@@ -4,16 +4,15 @@ import { Link } from 'react-router';
 import moment  from 'moment';
 
 var messageRowItem = (item) => (		
-		<div key={item.id} className="item">
-			<div className="content">
-				<div className="header">{item.text}</div>
-				<div className="description">{item.user} | <Link to={"listings/"+item.listingId}>Go to property</Link> | {moment(item.createdAt).fromNow()}</div>
-			</div>
+	<div key={item.id} className="item">
+		<div className="content">
+			<div className="header">{item.text}</div>
+			<div className="description">{item.user} | <Link to={"listings/"+item.listingId}>Go to property</Link> | {moment(item.createdAt).fromNow()}</div>
 		</div>
-	)
+	</div>
+)
 
 const MessagesUI = ({messages, loading}) => {
-	console.log("MessagesUI :", messages)
 	var list = _.map(messages, messageRowItem);   		
 	if(list.length == 0) {
 		list = <h3>No Message Found. Please go to property view and message the owner</h3>
