@@ -12,17 +12,21 @@ var messageRowItem = (item) => (
 		</div>
 	)
 
-const MessagesUI = ({messages}) => {
+const MessagesUI = ({messages, loading}) => {
 	console.log("MessagesUI :", messages)
 	var list = _.map(messages, messageRowItem);   		
 	if(list.length == 0) {
 		list = <h3>No Message Found. Please go to property view and message the owner</h3>
 	}
+	var content = <div className="ui active centered inline loader"></div>
+	if (!loading) {
+		content = list;
+	}
 	return (
 		<div className="ui main text container">
 			<h3 className="ui block header">Messages</h3>
 			<div className="ui middle aligned divided list very relaxed">
-				{list}
+				{content}
 			</div>
 		</div>
 	)

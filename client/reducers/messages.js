@@ -9,6 +9,18 @@ const messages = (state=[], action) => {
 				createdAt: Date.now()
 			}
 			return [...state, message];
+		case 'MESSAGES_REQUEST' : 
+			return {
+				loading: true,
+				data: [],
+				err: null
+			}
+		case 'MESSAGES_RECEIVE' :
+			return {
+				loading: false,
+				data: action.messages,
+				err: action.err
+			}
 
 		default:
 			return state;

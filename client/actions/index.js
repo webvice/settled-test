@@ -20,3 +20,20 @@ export function fetchListings() {
 					.then(json=> dispatch(receiveListings(json)));
 	}
 }
+
+function requestMessages() {
+	return {type:"MESSAGES_REQUEST"};
+}
+
+function receiveMessages(json) {
+	return {type:"MESSAGES_RECEIVE", messages:json};
+}
+
+export function fetchMessages() {
+	return (dispatch) => {
+		dispatch(requestMessages());
+		return fetch("/api/Messages")
+					.then(response => response.json())
+					.then(json=> dispatch(receiveMessages(json)));
+	}
+}

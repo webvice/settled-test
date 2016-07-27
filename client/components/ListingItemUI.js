@@ -25,7 +25,6 @@ const ListingItemUI = (props) => {
 			return (
 	   			<div className="ui main text container">
 					<Link to="listings" className="item"><i className="chevron left icon"></i> Back</Link>
-					<h1 className="ui header">This is Listing Item {listingItem.id}</h1>
 					<div className="ui items">
 	  					<div className="item">
 							<div className="content">

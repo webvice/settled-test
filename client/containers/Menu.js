@@ -12,7 +12,7 @@ class Menu extends React.Component {
 			        Project Name
 			      </a>
 			      <IndexLink activeStyle={highlightStyle} to="/" className="item">Home</IndexLink>
-			      <IndexLink activeStyle={highlightStyle} to="/listings" className="item">Listings</IndexLink>
+			      <Link activeStyle={highlightStyle} to="/listings" className="item">Listings</Link>
 			      <IndexLink activeStyle={highlightStyle} to="/messages" className="item">Messages</IndexLink>			      
 			    </div>
 			    <hr/>

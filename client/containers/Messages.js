@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 const mapStateToProps = (state) => {
 	console.log("messages state: ", state)
 	return {
-		messages: state.messages
+		messages: state.messages.data,
+		loading: state.listings.loading
 	}
 }
 
